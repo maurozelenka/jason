@@ -71,6 +71,7 @@ public class Create implements Runnable {
         }
         new File(path + "/src/agt").mkdirs();
         new File(path + "/src/env/example").mkdirs();
+        new File(path + "/.vscode").mkdirs();
     }
 
     void copyFiles(String masName, File path, boolean console) {
@@ -80,6 +81,9 @@ public class Create implements Runnable {
         copyFile(masName, "environment2",       "",      new File( path + "/src/env/example/Env.java"), console);
 
         copyFile(masName, "logging.properties", "",      new File( path + "/logging.properties"), console);
+
+        copyFile(masName, "vscode-tasks.json",  "",      new File( path + "/.vscode/tasks.json"), console);
+        copyFile(masName, "vscode-launch.json", "",      new File( path + "/.vscode/launch.json"), console);
     }
 
     public static void copyFile(String id, String source, String agName, File target, boolean consoleApp) {
