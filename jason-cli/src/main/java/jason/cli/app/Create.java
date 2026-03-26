@@ -84,6 +84,7 @@ public class Create implements Runnable {
 
         copyFile(masName, "vscode-tasks.json",  "",      new File( path + "/.vscode/tasks.json"), console);
         copyFile(masName, "vscode-launch.json", "",      new File( path + "/.vscode/launch.json"), console);
+        copyFile(masName, "vscode-settings.json", "",    new File( path + "/.vscode/settings.json"), console);
     }
 
     public static void copyFile(String id, String source, String agName, File target, boolean consoleApp) {
